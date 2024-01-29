@@ -20,13 +20,15 @@ public class ODEV6dilekceTaslak {
 
          System.out.println("tarih giriniz");
          String tarih = tarayici.next();
-
-
-         System.out.println(" velinin adi  soyadını giriniz");
+          
+         System.out.println(" velinin adi   giriniz");
          String  VeliAdi = tarayici.next();
 
+         System.out.println("velinin soy adini giriniz")
+         String SoyAdi = tarayici.next();
 
-
+         OdevlerSinifi o =  new  OdevlerSinifi ();
+         o.dilekceOlustır(ogrenciAdi,okulNo,izinMiktari,tarih,veliAdi); 
 
 
 
