@@ -8,25 +8,27 @@ public class ODEV6dilekceTaslak {
 
          Scanner tarayici = new Scanner( System.in);
 
-          System.out.println("öğrenci Adini giriniz");
-         String ogrenciAdi = tarayici.next();
+         System.out.println("öğrenci Adini giriniz");
+         String ogrenciAdi= tarayici.next();
 
-
-         System.out.println("okul no giriniz");
-         int OkulNo = tarayici.next();
+         System.out.println("öğrenci okulunu giriniz");
+         int okulNo= tarayici.nextInt();
 
          System.out.println("izin miktari giriniz");
-         int izinmiktari = tarayici.next();
+         int izinMiktari = tarayici.nextInt();
 
-         System.out.println("tarih giriniz");
+         System.out.println("Tarih giriniz");
          String tarih = tarayici.next();
 
+         System.out.println("velinin adini giriniz");
+         String veliadi=tarayici.next();
 
-         System.out.println(" velinin adi  soyadını giriniz");
-         String  VeliAdi = tarayici.next();
+         System.out.println("velinin soy adini giriniz");
+         String soyAdi = tarayici.next();
 
+ OdevlerSinifi o = new OdevlerSinifi();
 
-
+o.dilekceOlustur(ogrenciAdi,okulNo,izinMiktari,tarih,veliadi);
 
 
 

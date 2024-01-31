@@ -70,8 +70,8 @@ public  void  HarfSayisiBulma(String kelime,char harf) {
 
     public void  dilekceOlustur(String ogrenciAdi, int okulno,int izinmiktari,String tarih,String veliadi){
 
-        String dilekce = "\t\tBursa Anadolu lisesi Müdürlüğüne,\n"+ogrenciAdi
-        +" adlı "+okulno+"nolu öğrencini izin "+izinmiktari
+        String dilekce = "\t\tBursa Anadolu lisesi Müdürlüğüne,\n"
+                +ogrenciAdi +" adlı "+okulno+"nolu öğrencini izin "+izinmiktari
         +" gün izinli olmasını rica ediyorum.\n"
         +" tarih : "+tarih+"\n"
         +"Veli Ad-Soyad: "+veliadi;
@@ -79,6 +79,23 @@ public  void  HarfSayisiBulma(String kelime,char harf) {
 System.out.println(dilekce);
 
     }
+public int maasHesaplama(int gun){
+
+int calismaSaati = gun * 8 ; // saat olarak 8
+
+ int mesaiSaati  = calismaSaati - 160 ;
+
+ int mesaiUcret = mesaiSaati * 10;
+
+ int maas = 1750 +  mesaiUcret;
+
+  return maas ;
+
+
+}
+
+
+
 
 }
 
