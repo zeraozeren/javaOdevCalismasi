@@ -20,4 +20,12 @@ int gun  = tarayici.nextInt();
 
 
     }
+
+
+
+
+
+
+
+
 }

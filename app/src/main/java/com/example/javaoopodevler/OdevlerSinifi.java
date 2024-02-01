@@ -35,69 +35,84 @@ public class OdevlerSinifi {
 
     }
 
-public  void  HarfSayisiBulma(String kelime,char harf) {
+    public void HarfSayisiBulma(String kelime, char harf) {
 
-    int boyut = kelime.length(); //araba5
+        int boyut = kelime.length(); //araba5
 
-    char[] harfler = new char[boyut];
+        char[] harfler = new char[boyut];
 
-    for (int i = 0; i< boyut; i++) {
+        for (int i = 0; i < boyut; i++) {
 
-        harfler [i] = kelime.charAt(i);//1,2,3,
+            harfler[i] = kelime.charAt(i);//1,2,3,
 
-    }
-    int sayac= 0;
+        }
+        int sayac = 0;
 
-     for ( int i = 0 ;i<boyut;i++){
-
-
-         if (harfler[i]==harf){
-             sayac++;
-         }
-     }
-    System.out.println(" Harf Sayısı : " +sayac);
-}
+        for (int i = 0; i < boyut; i++) {
 
 
- public int icAciToplami(int KenarSayisi){
-       int sonuc = (KenarSayisi - 2) * 180;
-
-       return sonuc ;
-
+            if (harfler[i] == harf) {
+                sayac++;
+            }
+        }
+        System.out.println(" Harf Sayısı : " + sayac);
     }
 
 
+    public int icAciToplami(int KenarSayisi) {
+        int sonuc = (KenarSayisi - 2) * 180;
 
-    public void  dilekceOlustur(String ogrenciAdi, int okulno,int izinmiktari,String tarih,String veliadi){
-
-        String dilekce = "\t\tBursa Anadolu lisesi Müdürlüğüne,\n"
-                +ogrenciAdi +" adlı "+okulno+"nolu öğrencini izin "+izinmiktari
-        +" gün izinli olmasını rica ediyorum.\n"
-        +" tarih : "+tarih+"\n"
-        +"Veli Ad-Soyad: "+veliadi;
-
-System.out.println(dilekce);
+        return sonuc;
 
     }
-public int maasHesaplama(int gun){
 
-int calismaSaati = gun * 8 ; // saat olarak 8
 
- int mesaiSaati  = calismaSaati - 160 ;
+    public void dilekceOlustur(String ogrenciAdi, int okulno, int izinmiktari, String tarih, String veliadi) {
 
- int mesaiUcret = mesaiSaati * 10;
+        String dilekce = "\t\tBursa Anadolu lisesi müdürlüğüne,\n"
+                + ogrenciAdi + " adlı " + okulno + "nolu öğrencini izin " + izinmiktari
+                + " gün izinli olmasını rica ediyorum.\n"
+                + " tarih : " + tarih + "\n"
+                + "Veli Ad-Soyad: " + veliadi;
 
- int maas = 1750 +  mesaiUcret;
+        System.out.println(dilekce);
 
-  return maas ;
+    }
 
+    public int maasHesaplama(int gun) {
+
+        int calismaSaati = gun * 8; // saat olarak 8
+
+        int mesaiSaati = calismaSaati - 160;
+
+        int mesaiUcret = mesaiSaati * 10;
+
+        int maas = 1750 + mesaiUcret;
+
+        return maas;
+
+
+    }
+
+
+    public  void  internetUcretiHesaplama ( int gb){
+
+         int fazlaGb = gb - 50 ;
+
+          int FaturaMiktari = 100 +(fazlaGb * 4);
+
+        System.out.println("fatura : "+FaturaMiktari+"tl");
+
+
+
+
+
+    }
 
 }
 
 
 
-
-}
 
 
 
